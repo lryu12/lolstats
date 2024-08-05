@@ -8,7 +8,6 @@ function Profile({playerData, rankData, matchData}) {
     const summonerRank = rankData?.tier || "";
     const summonerTier = rankData?.rank || "";
     
-    console.log(summonerRank);
     const rankLogo = `./assets/Ranked Emblems Latest/Rank=${summonerRank.charAt(0).toUpperCase() + summonerRank.slice(1).toLowerCase()}.png`
 
     
@@ -28,7 +27,6 @@ function Profile({playerData, rankData, matchData}) {
                     {summonerRank ? (
                         <div>
                             <p>{summonerRank} {summonerTier}</p>
-                            {console.log(summonerRank.charAt(0).toUpperCase() + summonerRank.slice(1).toLowerCase())}
                             <img width="150px" height= "150px"src={`src/assets/Ranked Emblems Latest/Rank=${summonerRank.charAt(0).toUpperCase() + summonerRank.slice(1).toLowerCase()}.png`} alt="Rank Logo"/>
                         </div>
                     ) : (
